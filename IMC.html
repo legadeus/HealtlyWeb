@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> IMC </title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+    </nav>
+    <section class="textos-header">
+        <h1>¿Que es el IMC?</h1>
+        <h2>El índice de masa corporal (IMC) es un método utilizado para estimar la cantidad de grasa corporal que tiene una persona, 
+            y determinar por tanto si el peso está dentro del rango normal, o por el contrario, se tiene sobrepeso o delgadez.</h2>
+    </section>
+<p> Ingrese la altura:<input type="text" id="num1"></p>
+<p> Ingrese el peso:<input type="text" id="num2"></p>
+<button id ="calc">Calcular</button>
+<p>producto: <span id="sumar"></span></p>
+<script type="text/javascript">
+num1=document.getElementById("num1");
+num2=document.getElementById("num2");
+calc=document.getElementById("calc");
+sumar=document.getElementById("sumar");
+
+calc.onclick=function(){
+    if(num1.value!="" && num2.value!=""){
+        sum=(parseInt(num2.value)/parseFloat(num1.value*num1.value)); 
+        sumar.innerHTML=sum
+        console.log(sum);
+        window.alert("Su imc se ha calculado exitosamente");  
+    
+    }
+    else{
+        alert("Debes ingresar el primer y segundo numero")
+
+    }
+
+  
+};
+</script>
+<section class="texto">
+    <h1>Tabla del IMC</h1>
+    </section>
+<img src="img/imc.jpg">
